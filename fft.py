@@ -1,4 +1,8 @@
-# from Pillow import Image
+from sys import platform as sys_pf
+if sys_pf == 'darwin':
+    import matplotlib
+    matplotlib.use("TkAgg")
+
 import os
 import numpy as np
 import nibabel as nib
@@ -13,8 +17,9 @@ for item in os.listdir(folder):
         # convert the image into a numpy array
         a = np.array(img.dataobj)
         print(a)
+        print(a.shape)
 
-        # do the reverse FFT
+        # do the reverse FFT using mri-fft
         direct2dobject = Direct2d(a.shape)
         result = direct2dobject.ifft2D(a)
 
