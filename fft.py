@@ -7,6 +7,7 @@ import os
 import numpy as np
 import nibabel as nib
 from MRI_FFT.TwoD import Direct2d
+import matplotlib
 
 folder = 'data/'
 

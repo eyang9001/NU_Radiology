@@ -22,6 +22,18 @@ for item in os.listdir(folder):
         # img1 = sitk.ReadImage(folder + item)  # alternative way to pull in image
 
         # show image
-        nda = sitk.GetArrayFromImage(image)
-        plt.imshow(nda)
+        # nda = sitk.GetArrayFromImage(image)
+        # plt.imshow(nda)
+        # plt.show()
+
+        img = sitk.GetArrayFromImage(image)
+        f = np.fft.fft2(img)
+        fshift = np.fft.fftshift(f)
+        magnitude_spectrum = 20 * np.log(np.abs(fshift))
+
+        fig, (ax1, ax2) = plt.subplots(1,2)
+
+        ax1.imshow(img, cmap='gray', interpolation='bicubic')
+        ax2.imshow(magnitude_spectrum, cmap='gray', interpolation='bicubic')
+        plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
         plt.show()
