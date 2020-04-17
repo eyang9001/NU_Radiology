@@ -23,7 +23,7 @@ U-Net generally uses cross-entropy loss, which works well for image segmentation
 
 Training on 2500 2d slices over 80 epochs, the model reaches a **MSE of 3.2920e-04**.
 
-Here are some example outputs from the trained model:
+Here are some example outputs from the trained model on a held-out validation mri:
 ![image](https://user-images.githubusercontent.com/30561629/79598769-1e567680-80aa-11ea-8116-f5fd1a756c7e.png)
 ![image](https://user-images.githubusercontent.com/30561629/79600699-3380d480-80ad-11ea-979d-d418ffe3f944.png)
 ![image](https://user-images.githubusercontent.com/30561629/79600931-9e321000-80ad-11ea-88f3-582d08bb0842.png)
