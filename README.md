@@ -18,6 +18,7 @@ This architecture was selected because U-Net has proven to do well with segmenta
 
 ### Perceptual Loss
 ![image](https://user-images.githubusercontent.com/30561629/79601550-97f06380-80ae-11ea-8e85-358f023b206f.png)
+
 U-Net generally uses cross-entropy loss, which works well for image segmentation (classification), but is not appropriate for our goal. MSE would be more appropriate, but is insufficient in requiring the network to produce clear images, which is our main goal. Perceptual Loss improves upon this by leveraging the features extracted from the VGG19 network, which is known to be able to pull out features such as edges in the earlier layer activations, to full shapes in latter layer activations. By putting the U-Net output through VGG as well as the target clear image through VGG, extracting the activations from several layers, and calculating MSE between the features, the results are great.
 
 Training on 2500 2d slices over 80 epochs, the model reaches a **MSE of 3.2920e-04**.
