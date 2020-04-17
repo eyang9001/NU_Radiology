@@ -14,7 +14,7 @@ Now that the training data is created, the model used to correct for the motion 
 ### U-Net
 ![image](https://user-images.githubusercontent.com/30561629/79601142-f537e500-80ad-11ea-8c60-6d2d35c95824.png)
 
-This architecture was selected because U-Net has proven to do well with segmentation in medical images. The architecture is also a good fit given the input and output shapes are the same, which is what is needed for this project. And by using a linear activation on the last convolution layer instead of the sigmoid activation which is used for classification, the model can provide continuous outputs for each pixel.
+This architecture was selected because U-Net has proven to perform well with segmentation in medical images. The architecture is also a good fit given the input and output shapes are the same, which is what is needed for this project. And by using a linear activation on the last convolution layer instead of the sigmoid activation which is used for classification, the model can provide continuous outputs for each pixel.
 
 ### Perceptual Loss
 ![image](https://user-images.githubusercontent.com/30561629/79601550-97f06380-80ae-11ea-8e85-358f023b206f.png)
