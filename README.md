@@ -7,7 +7,7 @@ In order to train a model for this purpose, a dataset of ground-truth clear mris
 ![image](https://user-images.githubusercontent.com/30561629/79600123-4515ac80-80ac-11ea-94b2-2c64f550043b.png)
 On the left is the clear 2d slice, and the right is the generated blurred image.
 
-With this method, we can not only generate realistic blurred mris, but we can augment the amount of training data by using multiple motion files on each of the clear mris as well. This provides a method to augment the data, minimizing the number of novel mris required for this project.
+With this method, we can not only generate realistic blurred mris, but we can augment the amount of training data by using multiple motion files on each of the clear mris as well. With the ability to augment the data, this also minimizing the number of novel mris required for training.
 
 ## Part 2- Image Reconstruction
 Now that the training data is created, the model used to correct for the motion was created using the U-Net architecture, trained with Perceptual Loss.
