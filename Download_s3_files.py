@@ -8,8 +8,8 @@ for directory in directories:
         os.makedirs(directory)
 
 session = boto3.Session(
-    aws_access_key_id='AKIAIPNGQI7IMT2GV4CA',
-    aws_secret_access_key='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',
+    aws_access_key_id=ACCESS_KEY_HERE,
+    aws_secret_access_key=ACCESS_KEY_HERE,
 )
 s3 = session.resource('s3')
 # s3.download_file('nuradmris', 'OBJECT_NAME', 'FILE_NAME')
