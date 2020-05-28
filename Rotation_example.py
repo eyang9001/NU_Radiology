@@ -13,7 +13,7 @@ import SimpleITK as sitk
 from scipy import ndimage
 import random
 
-folder = 'data/'
+folder = 'mris/'
 
 for item in os.listdir(folder):
     if item.endswith(".nii"):
